@@ -1,0 +1,32 @@
+<nav class="navbar navbar-fixed-top shadow" id="js-nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" href="/"> <img src="/assets/02.png" alt="logo"> </a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="/#home">inicio</a></li>
+					<li><a href="/#courses">cursos</a></li>
+					<li><a href="/#about">nosotros</a></li>
+					
+					
+					<li><a href="/#news">novedades</a></li>
+					<li><a href="/#contact">contacto</a></li>
+					<%if user_signed_in? %>
+					<li class="nav-item">
+               			 <a class="nav-link" href="#"><%=current_user.email%></a>
+              		</li>
+              		<li class="nav-item active">
+                		<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              		</li>
+              		<%end%>
+				</ul>
+			</div>
+		</div>
+	</nav>

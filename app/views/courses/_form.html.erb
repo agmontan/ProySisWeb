@@ -1,0 +1,67 @@
+<%= form_with(model: course, local: true) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :primer_titulo %>
+    <%= form.text_field :first_title, id: :course_first_title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :segundo_titulo %>
+    <%= form.text_field :second_title, id: :course_second_title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primera_descripcion %>
+    <%= form.text_area :first_description, id: :course_first_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :segunda_descripcion %>
+    <%= form.text_area :second_description, id: :course_second_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detalle_descripcion %>
+    <%= form.text_area :detail_description, id: :course_detail_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :informacion_descripcion %>
+    <%= form.text_area :info_description, id: :course_info_description, :class => "form-control" %>
+  </div>
+
+   <div class="field">
+        <%= form.label :"imagen1" %><br />
+        <%= form.file_field :avatar %>
+    </div>
+
+     <div class="field">
+        <%= form.label :"imagen2" %><br />
+        <%= form.file_field :avatar1 %>
+    </div>
+
+     <div class="field">
+        <%= form.label :"imagen3" %><br />
+        <%= form.file_field :avatar2 %>
+    </div>
+
+     <div class="field">
+        <%= form.label :"imagen4" %><br />
+        <%= form.file_field :avatar3 %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit :type => "submit", :class => "btn btn-default" %>
+  </div>
+<% end %>

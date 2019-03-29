@@ -1,0 +1,50 @@
+	<!-- MODAL CONTENT -->
+          <div class="container">
+            <a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+            <div class="modal-body">
+              <!-- Wrapper for slides -->
+              <div class="carousel slide product-slide" id="product-carousel">
+                <!-- CAROSUEL SLIDER -->
+                <div class="carousel-inner cont-slider">
+                  <div class="item active"> <img alt="" src="<%=@workshop.avatar.url()%>" title=""> </div>
+                  
+                </div>
+                <!-- / CAROSUEL SLIDER -->
+
+                <!-- CAROUSEL INDICATORS -->
+                <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="0" data-target="#product-carousel"> 
+                    <img alt="" src="<%=@workshop.avatar.url()%>"> 
+                  </li>
+
+                
+                </ol>
+                <!-- / CAROUSEL INDICATORS -->
+              </div>
+
+              <!-- PRODUCT DESCRIPTION -->
+              <div class="container">
+                
+
+                <div class="row">
+                  <div class="col-md-8 col-md-push-2 product-description">
+                    <h4 class="section-heading"><%=@workshop.first_title%></h4>
+                    <p> <%=@workshop.first_description%> </p>
+
+                    
+
+                    
+
+                   
+                  </div>
+                </div>
+              </div>
+              <!-- / PRODUCT DESCRIPTION -->
+            </div>
+          </div>
+          
+          <!-- / MODAL CONTENT -->
+
+
+<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
+<%= link_to 'Back', workshops_path %>

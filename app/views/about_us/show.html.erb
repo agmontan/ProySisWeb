@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First title:</strong>
+  <%= @about_u.first_title %>
+</p>
+
+<p>
+  <strong>Second title:</strong>
+  <%= @about_u.second_title %>
+</p>
+
+<p>
+  <strong>Third title:</strong>
+  <%= @about_u.third_title %>
+</p>
+
+<p>
+  <strong>First description:</strong>
+  <%= @about_u.first_description %>
+</p>
+
+<p>
+  <strong>Second description:</strong>
+  <%= @about_u.second_description %>
+</p>
+
+<p>
+  <strong>Third description:</strong>
+  <%= @about_u.third_description %>
+</p>
+
+<%= link_to 'Edit', edit_about_u_path(@about_u) %> |
+<%= link_to 'Back', about_us_path %>

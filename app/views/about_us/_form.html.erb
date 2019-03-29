@@ -1,0 +1,62 @@
+<%= form_with(model: about_u, local: true) do |form| %>
+  <% if about_u.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(about_u.errors.count, "error") %> prohibited this about_u from being saved:</h2>
+
+      <ul>
+      <% about_u.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_title %>
+    <%= form.text_field :first_title, id: :about_u_first_title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :second_title %>
+    <%= form.text_field :second_title, id: :about_u_second_title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :third_title %>
+    <%= form.text_field :third_title, id: :about_u_third_title, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_description %>
+    <%= form.text_area :first_description, id: :about_u_first_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :second_description %>
+    <%= form.text_area :second_description, id: :about_u_second_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :third_description %>
+    <%= form.text_area :third_description, id: :about_u_third_description, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+        <%= form.label :"imagen1" %><br />
+        <%= form.file_field :avatar %>
+    </div>
+
+     <div class="field">
+        <%= form.label :"imagen2" %><br />
+        <%= form.file_field :avatar1 %>
+    </div>
+
+     <div class="field">
+        <%= form.label :"imagen3" %><br />
+        <%= form.file_field :avatar2 %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit :type => "submit", :class => "btn btn-default" %>
+  </div>
+<% end %>

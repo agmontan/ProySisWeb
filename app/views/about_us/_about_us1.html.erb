@@ -1,0 +1,36 @@
+<section class="container-fluid about white-color no-padding" id="about">
+    <% @about_us.each do |about_us| %>
+    <div class="about-background about-background-1 row no-margin">
+        <div class="col-md-6 about-black-box">
+        	<h3 class="section-heading"><%=about_us.first_title%></h3>
+        	<p><%=about_us.first_description%>.</p>
+        	<a href="#about_us1" class="btn btn-default">¿Por qué nosotros?</a>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+    <div class="about-background about-background-2 row no-margin" id="about_us1">
+        <div class="col-md-4 about-white-box col-md-offset-4">
+	        <h2 class="section-claim wow fadeInDown" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+	        <%=about_us.second_title%>
+	        	
+	        </h2>
+        	
+        	<p><p><%=about_us.second_description%>.</p>.</p>
+
+        	<a href="#about_us2" class="btn btn-default">¿con qué visión?</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="about-background about-background-3 row no-margin" id="about_us2">
+        <div class="col-md-6 about-black-box col-md-offset-6">
+        	<h3 class="section-heading"><%=about_us.third_title%></h3>
+            <p><%=about_us.third_description%>.</p>
+        	
+
+        	<a href="#contact" class="btn btn-default">contactanos</a>
+        </div>
+    </div>
+    <%end%>
+  </section>

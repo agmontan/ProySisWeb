@@ -1,0 +1,50 @@
+<section class="post-list" id="news">
+		<div class="container overflow-hidden">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Novedades</h3>
+				</div>
+
+				<div class="post-slider col-md-12">
+					<!-- NEWS CAROSUEL -->
+					<div class="swiper-wrapper">
+						<!-- SINGLE NEWS ITEM -->
+						<% @workshops.each do |workshop| %>
+						<div class="swiper-slide">
+							<div class="post-entry wow fadeInUp">
+								<a href="/workshops/<%=workshop.id%>" data-toggle="modal" data-target="">
+									<span class="post-entry-cover" style="background-image:url(<%=workshop.avatar.url()%>);">
+									</span>
+								</a>
+
+								<a class="h3" href="/workshops/<%=workshop.id%>" data-toggle="modal" data-target="">
+									<%=workshop.first_title%>
+								</a>
+								<a href="#" data-toggle="modal" data-target="#post-01" class="post-entry-more">
+									leer mas 
+									<span class="ti-arrow-right icon"></span>
+								</a>
+							</div>
+						</div>
+						<%end%>
+						<!-- / SINGLE NEWS ITEM -->
+						
+					</div>
+					<!-- / NEWS CAROSUEL -->
+
+					<!-- CAROUSEL CONTROLS -->
+					<div class="post-pagination text-center"></div>
+					<div class="post-slider-next right-arrow-negative"> 
+						<span class="ti-arrow-right"></span>
+					</div>
+					
+					<div class="post-slider-prev left-arrow-negative"> 
+						<span class="ti-arrow-left"></span>
+					</div>
+					<!-- / CAROUSEL CONTROLS -->
+				</div>
+			</div>
+
+					
+		</div>
+	</section>

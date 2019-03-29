@@ -1,0 +1,92 @@
+<!-- MODAL CONTENT -->
+          <div class="container">
+            <a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+            <div class="modal-body">
+              <!-- Wrapper for slides -->
+              <div class="carousel slide product-slide" id="product-carousel">
+                <!-- CAROSUEL SLIDER -->
+                <div class="carousel-inner cont-slider">
+                  <div class="item active"> <img alt="" src="<%=@course.avatar.url()%>" title=""> </div>
+                  <div class="item"> <img alt="" src="<%=@course.avatar1.url()%>" title=""> </div>
+                  <div class="item"> <img alt="" src="<%=@course.avatar2.url()%>" title=""> </div>
+                  <div class="item"> <img alt="" src="<%=@course.avatar3.url()%>" title=""> </div>
+                </div>
+                <!-- / CAROSUEL SLIDER -->
+
+                <!-- CAROUSEL INDICATORS -->
+                <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="0" data-target="#product-carousel"> 
+                    <img alt="" src="<%=@course.avatar.url()%>"> 
+                  </li>
+
+                  <li class="" data-slide-to="1" data-target="#product-carousel"> 
+                    <img alt="" src="<%=@course.avatar1.url()%>"> 
+                  </li>
+
+                  <li class="" data-slide-to="2" data-target="#product-carousel"> 
+                    <img alt="" src="<%=@course.avatar2.url()%>"> 
+                  </li>
+
+                  <li class="" data-slide-to="3" data-target="#product-carousel"> 
+                    <img alt="" src="<%=@course.avatar3.url()%>"> 
+                  </li>
+                </ol>
+                <!-- / CAROUSEL INDICATORS -->
+              </div>
+
+              <!-- PRODUCT DESCRIPTION -->
+              <div class="container">
+                
+
+                <div class="row">
+                  <div class="col-md-8 col-md-push-2 product-description">
+                    <h4 class="section-heading"><%=@course.first_title%></h4>
+                    <p> <%=@course.first_description%> </p>
+
+                    
+
+                    <div class="row">
+                      <div class="col-md-6"> 
+                        <img src="<%=@course.avatar2.url()%>" class="img-responsive" alt="product image">
+                      </div>
+                      
+                      <div class="col-md-6">
+                        <h4 class="section-heading"><%=@course.second_title%></h4>
+                        <p> <%=@course.second_description%></p>
+                      </div>
+                    </div>
+
+                    <div class="product-tabs">
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab1">Detalles</a></li>
+                        <li><a data-toggle="tab" href="#tab2">Informacion</a></li>
+                        
+                      </ul>
+
+                      <div class="tab-content">
+                        <div id="tab1" class="tab-pane fade in active">
+                          <h4 class="section-heading">Detalles</h4>
+
+                          <p><%=@course.detail_description%></p>
+                        </div>
+
+                        <div id="tab2" class="tab-pane fade">
+                          <h4 class="section-heading">Informacion</h4>
+
+                          <p><%=@course.info_description%></p>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- / PRODUCT DESCRIPTION -->
+            </div>
+          </div>
+          
+          <!-- / MODAL CONTENT -->
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

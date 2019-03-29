@@ -1,0 +1,29 @@
+
+<%= form_with(model: home, local: true) do |form| %>
+  <% if home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :titulo %>
+    <%= form.text_field :tittle, id: :home_tittle, :class => "form-control" %>
+  </div>
+
+   <div class="form-group">
+        <%= form.label :"imagen" %><br />
+        <%= form.file_field :avatar %>
+    </div>
+  <div class="actions">
+    <%= form.submit :type => "submit", :class => "btn btn-default" %>
+  </div>
+<% end %>
+
+
